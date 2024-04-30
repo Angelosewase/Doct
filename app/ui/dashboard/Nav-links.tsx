@@ -24,23 +24,26 @@ const icons = {
   payment: CreditCardIcon,
   message: EnvelopeIcon,
 };
+import { usePathname } from "next/navigation";
 
 const NavLink = (props: navlink) => {
-  const [active, setIsactive] = React.useState(false);
+  const [hovered, setIsHovered] = React.useState(false);
   const Icon = icons[props.icon];
+  const path = usePathname().includes(props.path)  
+  
   return (
     <div
-      className=" hover:bg-black hover:text-white py-2 px-2 rounded  mx-2 mt-2 transition text-gray-700"
-      onMouseEnter={() => {
-        setIsactive(true);
-      }}
-      onMouseLeave={() => {
-        setIsactive(false);
-      }}
+      className={clsx( ' hover:bg-blue-300 hover:text-white py-2 px-2 rounded  mx-2 mt-2 transition text-gray-700 ',
+      {"bg-black":path,"text-white":path})}
+      onMouseEnter={ ()=>{setIsHovered(true)}}
+      onMouseLeave={()=>{setIsHovered(false)}}
     >
-      <Link href={`/dashboard/${props.icon}`} className="flex gap-1  items-center">
+      <Link
+        href={`/dashboard${props.path}`}
+        className="flex gap-1  items-center"
+      >
         <Icon
-          className={clsx(`h-6 w-6  text-gray-700 ${active && "text-white"}`)}
+          className={clsx(`h-6 w-6  text-gray-700`,{ "text-white":hovered||path})}
         />
         <p>{props.description}</p>
       </Link>
@@ -49,5 +52,3 @@ const NavLink = (props: navlink) => {
 };
 
 export default NavLink;
-
-

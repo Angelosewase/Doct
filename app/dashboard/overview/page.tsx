@@ -1,9 +1,9 @@
 import React from "react";
-import Stats from "../ui/records_stats/stats";
-import Appointmentreqlist from "../ui/dashboard/appointments/appointmentsreq";
-import PatientsStats, { GenderDiv } from "../ui/records_stats/patientsStats";
-import Appointments from "../ui/dashboard/appointments/appointments";
-import RecentPatients from "../ui/patients/recentPatients";
+import Stats from "../..//ui/records_stats/stats";
+import Appointmentreqlist from "../../ui/dashboard/appointments/appointmentsreq";
+import PatientsStats, { GenderDiv } from "../../ui/records_stats/patientsStats";
+import Appointments from "../../ui/dashboard/appointments/appointments";
+import RecentPatients from "../../ui/patients/recentPatients";
 
 const Page = () => {
   return (

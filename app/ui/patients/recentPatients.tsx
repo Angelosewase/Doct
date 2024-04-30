@@ -34,7 +34,7 @@ const RecentPatients = () => {
         </div>
       </div>
      {
-        patientsdata.map(patient => <RecentPatient {...patient}/>)
+        patientsdata.map((patient,idx) => <RecentPatient {...patient} key={idx}/>)
      }
     </div>
   );

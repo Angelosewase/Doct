@@ -5,6 +5,7 @@ import { CategoryStats } from "./placeholderdata"
 export type navlink ={
     icon:"overview" |"appointment"|"patients"|"schedule"|"blog"|"settings"|"payment"|"message",
     description:string,
+    path:string
     
 }
 
@@ -45,3 +46,4 @@ disease:string,
 status:string
 
 }
+

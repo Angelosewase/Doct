@@ -3,7 +3,8 @@ import {
   appointmentrequestdata,
   categoryStats,
   appointments,
-  Patientsdata
+  Patientsdata,
+  navlink
 } from "@/app/lib/definitions";
 
 export const statsdata: Statsprops1[] = [
@@ -73,4 +74,15 @@ status:"Out-Patient"
 },
 ]
 
+
+export const navigationData: navlink[] = [
+  { icon: "overview", description: "Overview" ,path:"/overview"},
+  { icon: "appointment", description: "Appointments",path:"/appointments"},
+  { icon: "patients", description: "Patients" ,path:"/patients"},
+  { icon: "schedule", description: "Schedule Timings",path:"/schedules" },
+  { icon: "payment", description: "Payments",path:"/payments" },
+  { icon: "message", description: "messages",path:"/messages" },
+  { icon: "blog", description: "Blog",path:"/blog" },
+  { icon: "settings", description: "Settings",path:"/settings" },
+];
 
