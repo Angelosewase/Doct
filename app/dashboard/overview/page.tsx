@@ -1,5 +1,5 @@
 import React from "react";
-import Stats from "../..//ui/records_stats/stats";
+import Stats from "../../ui/records_stats/stats";
 import Appointmentreqlist from "../../ui/dashboard/appointments/appointmentsreq";
 import PatientsStats, { GenderDiv } from "../../ui/records_stats/patientsStats";
 import Appointments from "../../ui/dashboard/appointments/appointments";
@@ -20,7 +20,7 @@ const Page = () => {
       <Stats />
       <div className="mt-8 flex gap-20 flex-wrap">
         <Appointmentreqlist />
-        <div className="flex flex-col gap-3">
+        <div className="flex md:flex flex-col lg:flex-col gap-3">
           <PatientsStats />
           <GenderDiv />
         </div>

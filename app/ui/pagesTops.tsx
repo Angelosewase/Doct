@@ -11,9 +11,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const PagesTop = () => {
-  const path = usePathname()!==("/dashboard/messages")
+  const path = usePathname().includes("/dashboard/messages") 
   return (
-    path && (
+    !path && (
       <div className="static top-0 right-0  pt-1 flex  justify-end md:justify-between  mx-5">
         <label className="md:flex hidden">
           <MagnifyingGlassIcon className="w-5 text-slate-500 " />

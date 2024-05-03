@@ -1,7 +1,3 @@
-import { Stringifier } from "postcss"
-import { CategoryStats } from "./placeholderdata"
-
-
 export type navlink ={
     icon:"overview" |"appointment"|"patients"|"schedule"|"blog"|"settings"|"payment"|"message",
     description:string,
@@ -47,3 +43,60 @@ status:string
 
 }
 
+export enum gender {
+  Male ="Male",
+  Female ="Female",
+  bisexual ="bisexual",
+  nonBinary="nonBinary"
+}
+export type user={
+  id:number
+  names:string,
+  profileImg:string,
+  gender:"Male"|"Female"|"nonBinary"|"bisexual",
+  age?:number,
+  email?:string,
+  phone?:string,
+  address?:string,
+}
+
+export type message ={
+  author:user,
+  time:string,
+  content:string
+}
+export type chatMessage={
+chatmessage:string,
+time:string,
+type:"sent"|"received"
+profileImage?:string
+}
+
+export type chat={
+  Authorid:number,
+  AuthorProfileImage:string,
+  AuthorName:string,
+  messages:chatMessage[],
+  time:string
+  
+}
+
+export type sentMessage={
+  receiverid:number, 
+  time:string,
+  contents:chatMessage[]
+}
+
+export type settingsLink={
+  to:string,
+  text:string
+}
+
+export type reviewsdatatype= {
+  profileImg:string,
+  names:string,
+  occupation:string,
+  date:string,
+  stars:number,
+  content:string
+}
