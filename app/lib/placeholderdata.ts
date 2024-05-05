@@ -13,6 +13,7 @@ import {
   user,
   settingsLink,
   reviewsdatatype,
+  patient
 } from "@/app/lib/definitions";
 import { handleMessages } from "./utils";
 
@@ -207,3 +208,25 @@ export const reviews: reviewsdatatype[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
+
+export const PatientsData:Array<patient>=[
+  {
+    profileImg:"/profile.jpg",
+    names:"John Smith",
+    patientId:"y478y470",
+    date:"June 20/2024",
+    gender:"Male",
+    disease:"Diabetes",
+    status:"In-treatment",
+    payment:"Paypal"
+  },  {
+    profileImg:"/profile1.jpg",
+    names:"Annette Black",
+    patientId:"quhgr85458",
+    date:"May 20/2024",
+    gender:"Female",
+    disease:"Cancer",
+    status:"Out-patient",
+    payment:"Private cash"
+  },
+]

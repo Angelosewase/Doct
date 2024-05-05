@@ -100,3 +100,15 @@ export type reviewsdatatype= {
   stars:number,
   content:string
 }
+
+export type patient={
+  profileImg:string,
+  names:string,
+  patientId:string,
+  date:string,
+  gender:"Male"|"Female"|"nonBinary"|"bisexual",
+  disease:string,
+  status:"In-treatment"|"Out-patient",
+  payment:"Private cash"|"Paypal"|"Payneer",
+
+}
