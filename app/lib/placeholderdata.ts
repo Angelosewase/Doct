@@ -13,7 +13,8 @@ import {
   user,
   settingsLink,
   reviewsdatatype,
-  patient
+  patient,
+  patientsfacts
 } from "@/app/lib/definitions";
 import { handleMessages } from "./utils";
 
@@ -215,18 +216,118 @@ export const PatientsData:Array<patient>=[
     names:"John Smith",
     patientId:"y478y470",
     date:"June 20/2024",
+    dob:"June 20/2024",
     gender:"Male",
+    age:24,
     disease:"Diabetes",
     status:"In-treatment",
-    payment:"Paypal"
+    payment:"Paypal",
+    email:"JohnSmith@gmail.com",
+    phone:"+250 788762654",
+    tests:[
+      {
+        max:100,
+        value:70,
+        record:"Blood pressure",
+        measuredRecord:"141/90mhg",
+        color:"bg-red-50",
+        dataColor:"bg-red-500"
+      },{
+        max:100,
+        value:10,
+        record:"Body Temperature",
+        measuredRecord:"29 K",
+        color:"bg-indigo-50",
+        dataColor:"bg-indigo-500"
+      },{
+        max:100,
+        value:40,
+        record:"Blood weight",
+        measuredRecord:"78kg",
+        color:"bg-blue-50",
+        dataColor:"bg-blue-500"
+      },{
+        max:100,
+        value:30,
+        record:"Blood height",
+        measuredRecord:"5.6 inch",
+        color:"bg-yellow-50",
+        dataColor:"bg-yellow-500"
+      }
+    ]
   },  {
     profileImg:"/profile1.jpg",
     names:"Annette Black",
     patientId:"quhgr85458",
     date:"May 20/2024",
+    dob:"May 20/2024",
     gender:"Female",
+    age:22,
     disease:"Cancer",
     status:"Out-patient",
-    payment:"Private cash"
+    payment:"Private cash",
+    email:"WillSmith@gmail.com",
+    phone:"+250 788790265",
+    tests:[
+      {
+        max:100,
+        value:70,
+        record:"Blood pressure",
+        measuredRecord:"141/90mhg",
+        color:"bg-red-50",
+        dataColor:"bg-red-500"
+      },{
+        max:100,
+        value:10,
+        record:"Body Temperature",
+        measuredRecord:"29 K",
+        color:"bg-indigo-50",
+        dataColor:"bg-indigo-500"
+      },{
+        max:100,
+        value:40,
+        record:"Blood weight",
+        measuredRecord:"78kg",
+        color:"bg-blue-50",
+        dataColor:"bg-blue-500"
+      },{
+        max:100,
+        value:30,
+        record:"Blood height",
+        measuredRecord:"5.6 inch",
+        color:"bg-yellow-50",
+        dataColor:"bg-yellow-500"
+      }
+    ]
   },
 ]
+
+export const patientfactsdata:Array<patientsfacts>=[{
+  max:100,
+  value:70,
+  record:"Blood pressure",
+  measuredRecord:"141/90mhg",
+  color:"bg-red-50",
+  dataColor:"bg-red-500"
+},{
+  max:100,
+  value:10,
+  record:"Body Temperature",
+  measuredRecord:"29 K",
+  color:"bg-indigo-50",
+  dataColor:"bg-indigo-500"
+},{
+  max:100,
+  value:40,
+  record:"Blood weight",
+  measuredRecord:"78kg",
+  color:"bg-blue-50",
+  dataColor:"bg-blue-500"
+},{
+  max:100,
+  value:30,
+  record:"Blood height",
+  measuredRecord:"5.6 inch",
+  color:"bg-yellow-50",
+  dataColor:"bg-yellow-500"
+}]

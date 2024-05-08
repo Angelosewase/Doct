@@ -106,9 +106,31 @@ export type patient={
   names:string,
   patientId:string,
   date:string,
+  dob?:string,
   gender:"Male"|"Female"|"nonBinary"|"bisexual",
+  age?:number
   disease:string,
   status:"In-treatment"|"Out-patient",
   payment:"Private cash"|"Paypal"|"Payneer",
+  email?:string,
+  phone?:string,
+  tests?:Array<patientsfacts>
 
+}
+
+
+export const bgcolors ={
+    red:"bg-red-50",
+    blue:"bg-blue-50",
+    yellow:"bg-yellow-50",
+    indigo:"bg-purple-50",
+}
+
+export type patientsfacts ={
+  max:number, 
+  value:number, 
+  record:string,
+  measuredRecord:string,
+  color: "bg-red-50"|"bg-blue-50"|"bg-yellow-50"|"bg-indigo-50",
+  dataColor:"bg-red-500"|"bg-blue-500"|"bg-yellow-500"|"bg-indigo-500"
 }

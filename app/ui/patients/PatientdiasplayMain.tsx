@@ -33,7 +33,7 @@ const PatientdisplayMain = ({
         <div className="hidden md:block">{status}</div>
         <div className="hidden md:block">{payment}</div>
         <div>
-          <Actions />
+          <Actions id={patientId}/>
         </div>
       </div>
     </>

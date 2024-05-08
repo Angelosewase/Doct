@@ -30,7 +30,7 @@ export class Chart extends PureComponent {
   }
 }
 
-export const ProgressBar = (props: { value: number; max: number }) => {
+export const ProgressBar = (props: { value: number; max: number,color:string }) => {
   let percentage = ((props.value / props.max) * 100).toFixed(0);
   const divref = useRef<HTMLDivElement>(null);
 
@@ -42,8 +42,8 @@ export const ProgressBar = (props: { value: number; max: number }) => {
 
   return (
     <>
-      <div className="w-30 h-2 rounded-lg bg-gray-100">
-        <div className="bg-green-400 h-2 rounded-lg" ref={divref}></div>
+      <div className={`w-30 h-2 rounded-lg bg-gray-100`}>
+        <div className={` h-2 rounded-lg ${props.color}`} ref={divref}></div>
       </div>
     </>
   );

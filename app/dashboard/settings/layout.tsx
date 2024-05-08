@@ -44,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <span className="text-sm text-gray-400">Trust</span>
                 <span className="text-sm text-gray-400">90%</span>
               </div>
-              <ProgressBar value={70} max={80} />
+              <ProgressBar value={70} max={80} color="bg-green-400"/>
             </div>
           </div>
         </div>
