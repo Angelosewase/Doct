@@ -8,7 +8,7 @@ const PatientsDisplay = (props: { id?:string | string[]})=>
   {
     const patient = PatientsData.find(patient => patient.patientId === props.id)
   return (
-    <div className="fixed top-[70px]  right-5 shadow-sm bg-white px-3 rounded-lg">
+    <div className="fixed top-[70px]  right-5 shadow-sm bg-white px-3 rounded-lg hidden lg:block">
       <div className="flex flex-col items-center mt-3 mb-5  border-b border-gray-100 pb-3">
         <Image
           src={patient?.profileImg ||""}

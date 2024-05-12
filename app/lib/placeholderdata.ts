@@ -14,7 +14,8 @@ import {
   settingsLink,
   reviewsdatatype,
   patient,
-  patientsfacts
+  patientsfacts,
+  patientHealthTrackersData
 } from "@/app/lib/definitions";
 import { handleMessages } from "./utils";
 
@@ -331,3 +332,38 @@ export const patientfactsdata:Array<patientsfacts>=[{
   color:"bg-yellow-50",
   dataColor:"bg-yellow-500"
 }]
+
+
+export const patientHealthtrackersData:Array<patientHealthTrackersData>=[
+  {
+    patientId:"y478y470",
+    healthTrackers:[
+      {
+        monitoredTracker:"Blood pressure",
+        Additions:"personalized Threshold",
+        reportingTime:"Once daily @ 08:00 am",
+        FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+      }  , {
+        monitoredTracker:"Exercise",
+        Additions:null,
+        reportingTime:"Once daily @ 08:00 am",
+        FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+      }
+    ]
+  },  {
+    patientId:"quhgr85458",
+    healthTrackers:[
+      {
+        monitoredTracker:"sleep",
+        Additions:"personalized Threshold",
+        reportingTime:"Once daily @ 08:00 am",
+        FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+      }  , {
+        monitoredTracker:"pulse",
+        Additions:null,
+        reportingTime:"Once daily @ 08:00 am",
+        FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+      }
+    ]
+  }
+]

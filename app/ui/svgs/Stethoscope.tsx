@@ -1,6 +1,6 @@
 import React from "react";
 
-const stethoscope = ({fill,color}:{fill?:string,color:string}):React.ReactNode => {
+const Stethoscope = ({color}:{color:string}):React.ReactNode => {
   return (
     <>
       <svg
@@ -18,4 +18,4 @@ const stethoscope = ({fill,color}:{fill?:string,color:string}):React.ReactNode =
   );
 };
 
-export default stethoscope;
+export default Stethoscope;

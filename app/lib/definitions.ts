@@ -134,3 +134,16 @@ export type patientsfacts ={
   color: "bg-red-50"|"bg-blue-50"|"bg-yellow-50"|"bg-indigo-50",
   dataColor:"bg-red-500"|"bg-blue-500"|"bg-yellow-500"|"bg-indigo-500"
 }
+
+export type healthtracker ={
+  monitoredTracker:string,
+  Additions:string |null,
+  reportingTime:string,
+  FrequencyReview:string,
+
+}
+
+export type patientHealthTrackersData={
+  patientId:string,
+  healthTrackers:Array<healthtracker>
+}

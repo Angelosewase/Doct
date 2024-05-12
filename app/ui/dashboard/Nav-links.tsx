@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const icons = {
   overview: DocumentChartBarIcon,
-  appointment: CalendarIcon,
+  appointment: CalendarIcon,                                           
   patients: UserCircleIcon,
   schedule: ClockIcon,
   blog: DocumentTextIcon,
