@@ -15,7 +15,8 @@ import {
   reviewsdatatype,
   patient,
   patientsfacts,
-  patientHealthTrackersData
+  healthtracker,
+  patientConsultationPlanData
 } from "@/app/lib/definitions";
 import { handleMessages } from "./utils";
 
@@ -303,6 +304,7 @@ export const PatientsData:Array<patient>=[
   },
 ]
 
+
 export const patientfactsdata:Array<patientsfacts>=[{
   max:100,
   value:70,
@@ -334,9 +336,18 @@ export const patientfactsdata:Array<patientsfacts>=[{
 }]
 
 
-export const patientHealthtrackersData:Array<patientHealthTrackersData>=[
+export const patientsConsultationData:Array<patientConsultationPlanData>=[
   {
     patientId:"y478y470",
+    consultationMethod:"clinic consultation",
+    location:"MedySyl",
+    date:"11/07/2021",
+    time:"11:11",
+    DoctorName:"Dr. Stephen Conley",
+    testsDescription:"A negative test result only means that you did not have COVID-19 at the time of testing. However, that does not mean you will not get COVID-19",
+    ConsulationSummary:"An after-visit summary that provides a patient with relevant and actionable information and instructions containing the patient name, provider's office contact information, date and location of visit, an updated medication list, updated vitals, reason(s) for visit",
+
+    Amount:500,
     healthTrackers:[
       {
         monitoredTracker:"Blood pressure",
@@ -350,8 +361,18 @@ export const patientHealthtrackersData:Array<patientHealthTrackersData>=[
         FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
       }
     ]
-  },  {
+  }, 
+  
+  {
     patientId:"quhgr85458",
+    consultationMethod:"clinic consultation",
+    location:"MedySyl",
+    date:"11/07/2021",
+    time:"11:11",
+    DoctorName:"Dr. Stephen Conley",
+    testsDescription:"A negative test result only means that you did not have COVID-19 at the time of testing. However, that does not mean you will not get COVID-19",
+    ConsulationSummary:"An after-visit summary that provides a patient with relevant and actionable information and instructions containing the patient name, provider's office contact information, date and location of visit, an updated medication list, updated vitals, reason(s) for visit",
+    Amount:1000,
     healthTrackers:[
       {
         monitoredTracker:"sleep",
@@ -366,4 +387,40 @@ export const patientHealthtrackersData:Array<patientHealthTrackersData>=[
       }
     ]
   }
+]
+
+
+
+
+export const HealthTrackers:Array<healthtracker>=[
+  {
+  monitoredTracker:"pulse",
+  Additions:null,
+  reportingTime:"Once daily @ 08:00 am",
+  FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+},
+{
+  monitoredTracker:"sleep",
+  Additions:"personalized Threshold",
+  reportingTime:"Once daily @ 08:00 am",
+  FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+},
+{
+  monitoredTracker:"temperature",
+  Additions:"personalized Threshold",
+  reportingTime:"Once daily @ 08:00 am",
+  FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+} ,
+{
+  monitoredTracker:"Blood pressure",
+  Additions:null,
+  reportingTime:"Once daily @ 08:00 am",
+  FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+},
+{
+  monitoredTracker:"Heart rate",
+  Additions:null,
+  reportingTime:"Once daily @ 08:00 am",
+  FrequencyReview:"Your doctor will probably ordera and have neurogical changes"
+}
 ]

@@ -2,7 +2,9 @@ import React from "react";
 import PatientdisplayMain from "./PatientdiasplayMain";
 import { PatientsData } from "@/app/lib/placeholderdata";
 
+
 const MainPatientsTable = () => {
+
   return (
     <>
       <div className="w-[95%] grid grid-cols-3  md:grid-cols-8 bg-gray-100  py-2 mt-6 justify-items-center">

@@ -65,7 +65,9 @@ return (
             <p className='text-xs text-gray-500 max-w-60 m-0'>Notify Patient about the availabilty ofconsultation note</p>
           </div>
           <div className='flex gap-2'>
-            <button className='p-2 border border-blue-300 rounded '>cancel</button>
+            <button className='p-2 border border-blue-300 rounded ' onClick={()=>{
+              route.replace(`/dashboard/patients`)
+            }}>cancel</button>
             <button className='p-2 border border-blue-300 bg-blue-300 rounded text-white'>save</button>
           </div>
         </div>

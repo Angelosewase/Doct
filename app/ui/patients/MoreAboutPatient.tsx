@@ -46,13 +46,13 @@ export const Actions = (props: { id: string }) => {
   const [showmore, setShowmore] = React.useState(false);
   return (
     <>
-      <div className="relative">
+      <div className="relative" onClick={() => {
+            setShowmore((prev) => !prev);
+          }}>
         <EllipsisHorizontalIcon
           width={20}
           className="text-black"
-          onClick={() => {
-            setShowmore((prev) => !prev);
-          }}
+          
         />
         {showmore ? (
           <div className="flex flex-col absolute bottom-0  left-7 gap-1 shadow   rounded-md bg-white">

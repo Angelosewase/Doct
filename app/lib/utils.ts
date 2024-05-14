@@ -1,6 +1,6 @@
 import { message, sentMessage, chatMessage } from "@/app/lib/definitions";
 import { chat } from "@/app/lib/definitions";
-import { messages,patientHealthtrackersData } from "./placeholderdata";
+import { messages,patientsConsultationData} from "./placeholderdata";
 
 
 export function formatDateTime(date: Date): string {
@@ -97,12 +97,12 @@ export function sortbytime(groupedchat: chatMessage[]): Array<chatMessage> {
 }
 
 
-export function findPatientHealthTrackers(id:string){
-   const patienttrackersdata= patientHealthtrackersData.find(tracker => tracker.patientId === id)
+export function findPatientConsultationData(id:string){
+   const patientConsultationData=patientsConsultationData.find( data => data.patientId === id)
 
-  if(!patienttrackersdata){
+  if(!patientConsultationData){
     return null
   }
 
-  return patienttrackersdata
+  return patientConsultationData
 }

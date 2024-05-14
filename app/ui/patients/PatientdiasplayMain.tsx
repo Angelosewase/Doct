@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { Actions } from "./MoreAboutPatient";
 import { patient } from "@/app/lib/definitions";
+// import { useRouter } from "next/navigation";
 
 const PatientdisplayMain = ({
   profileImg,
@@ -13,9 +15,15 @@ const PatientdisplayMain = ({
   status,
   payment,
 }: patient) => {
+  //  const router = useRouter()
+
+  //  function handleclick(){
+  //   router.replace(`/dashboard/patients/patientConsultationNote/${patientId}`)
+  //  }
   return (
     <>
-      <div className=" w-[95%] grid grid-cols-3 md:grid-cols-8 bg-white shadow-sm rounded  py-1 mt-2 items-center justify-items-center">
+      <div className=" w-[95%] grid grid-cols-3 md:grid-cols-8 bg-white shadow-sm rounded  py-1 mt-2 items-center justify-items-center" >
+    
         <div className=" flex items-center gap-2 text-sm justify-self-start ml-5">
           <Image
             src={profileImg}
@@ -33,7 +41,7 @@ const PatientdisplayMain = ({
         <div className="hidden md:block">{status}</div>
         <div className="hidden md:block">{payment}</div>
         <div>
-          <Actions id={patientId}/>
+          <Actions  id={patientId}/>
         </div>
       </div>
     </>

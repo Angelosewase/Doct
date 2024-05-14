@@ -143,7 +143,15 @@ export type healthtracker ={
 
 }
 
-export type patientHealthTrackersData={
+export type patientConsultationPlanData={
   patientId:string,
+  consultationMethod:string,
+  location:string
+  date:string,
+  time:string,
+  DoctorName:string,
+  testsDescription:string,
+  ConsulationSummary:string,
+  Amount:number,
   healthTrackers:Array<healthtracker>
 }

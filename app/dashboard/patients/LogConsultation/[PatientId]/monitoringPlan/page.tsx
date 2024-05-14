@@ -30,11 +30,11 @@ const page = () => {
       <div className="mx-8 mt-7">
         <MonitoringPlan />
         <div className="flex gap-2 justify-end">
-          <button className="p-2 border border-blue-300 rounded ">
+          <button className="p-2 border border-blue-300 rounded " onClick={()=> route.replace(`/dashboard/patients`)}>
             cancel
           </button>
           <button className="p-2 border border-blue-300 bg-blue-500 rounded text-white" onClick={()=>{
-            route.replace(`/dashboard/patients/LogConsultation/${PatientId}/healthTrackes`)
+            route.replace(`/dashboard/patients/LogConsultation/${PatientId}/healthTrackers`)
           }}>
             Next
           </button>
